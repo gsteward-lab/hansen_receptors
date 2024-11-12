@@ -8,9 +8,12 @@ from netneurotools import datasets, plotting
 from matplotlib.colors import ListedColormap
 from scipy.stats import zscore
 from nilearn.datasets import fetch_atlas_schaefer_2018
+import os
 
-path = 'C:/Users/justi/OneDrive - McGill University/MisicLab/proj_receptors/\
-github/hansen_receptors/'
+
+scriptpath = os.path.realpath(__file__)
+parentDirInd = scriptpath.find("code")
+path = scriptpath[0:parentDirInd]
 
 scale = 'scale100'
 
